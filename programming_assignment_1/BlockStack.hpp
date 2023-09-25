@@ -3,6 +3,7 @@
 #define BLOCKSTACK
 
 #include <iostream>
+#include <vector>
 #include <list>
 #include <utility>
 #include <string>

@@ -4,7 +4,7 @@ using std::cout;
 using std::endl;
 using std::cerr;
 
-BlockStack::BlockStack(std::string Filename, std::vector< std::list<Block> >& goalState){
+BlockStack::BlockStack(std::string Filename, std::vector<std::list<Block>>& goalState){
     this->movesMade.clear();
     this->blockColumns.clear();
     this->depth = 0;
