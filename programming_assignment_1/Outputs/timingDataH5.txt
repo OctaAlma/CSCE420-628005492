@@ -1,0 +1,194 @@
+
+
+-------------------------- USING PROB A FILES --------------------------n
+Success! Goal found.
+Statistics: probA03.bwp | Method: A* with H5 | Planlen 3 | Iter 4 | Max queue size: 13
+
+./blocksworld probA0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 74% cpu 0.002 total
+
+
+
+Success! Goal found.
+Statistics: probA04.bwp | Method: A* with H5 | Planlen 4 | Iter 7 | Max queue size: 18
+
+./blocksworld probA0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 74% cpu 0.002 total
+
+
+
+Success! Goal found.
+Statistics: probA05.bwp | Method: A* with H5 | Planlen 5 | Iter 7 | Max queue size: 20
+
+./blocksworld probA0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 76% cpu 0.002 total
+
+
+
+Success! Goal found.
+Statistics: probA06.bwp | Method: A* with H5 | Planlen 6 | Iter 23 | Max queue size: 44
+
+./blocksworld probA0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 89% cpu 0.003 total
+
+
+
+Success! Goal found.
+Statistics: probA07.bwp | Method: A* with H5 | Planlen 7 | Iter 28 | Max queue size: 64
+
+./blocksworld probA0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 90% cpu 0.004 total
+
+
+
+Success! Goal found.
+Statistics: probA08.bwp | Method: A* with H5 | Planlen 8 | Iter 56 | Max queue size: 113
+
+./blocksworld probA0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 94% cpu 0.006 total
+
+
+
+Success! Goal found.
+Statistics: probA09.bwp | Method: A* with H5 | Planlen 9 | Iter 62 | Max queue size: 99
+
+./blocksworld probA0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 94% cpu 0.006 total
+
+
+
+Success! Goal found.
+Statistics: probA10.bwp | Method: A* with H5 | Planlen 12 | Iter 263 | Max queue size: 353
+
+./blocksworld probA$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.02s user 0.00s system 98% cpu 0.021 total
+
+
+
+Success! Goal found.
+Statistics: probA11.bwp | Method: A* with H5 | Planlen 12 | Iter 183 | Max queue size: 310
+
+./blocksworld probA$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.02s user 0.00s system 97% cpu 0.016 total
+
+
+
+
+-------------------------- USING PROB B FILES --------------------------n
+Success! Goal found.
+Statistics: probB03.bwp | Method: A* with H5 | Planlen 3 | Iter 5 | Max queue size: 58
+
+./blocksworld probB0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 87% cpu 0.003 total
+
+
+
+Success! Goal found.
+Statistics: probB04.bwp | Method: A* with H5 | Planlen 4 | Iter 5 | Max queue size: 75
+
+./blocksworld probB0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 89% cpu 0.003 total
+
+
+
+Success! Goal found.
+Statistics: probB05.bwp | Method: A* with H5 | Planlen 6 | Iter 13 | Max queue size: 150
+
+./blocksworld probB0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.01s user 0.00s system 94% cpu 0.007 total
+
+
+
+Success! Goal found.
+Statistics: probB06.bwp | Method: A* with H5 | Planlen 6 | Iter 6 | Max queue size: 70
+
+./blocksworld probB0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.00s user 0.00s system 91% cpu 0.004 total
+
+
+
+Success! Goal found.
+Statistics: probB07.bwp | Method: A* with H5 | Planlen 7 | Iter 16 | Max queue size: 178
+
+./blocksworld probB0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.01s user 0.00s system 95% cpu 0.008 total
+
+
+
+Success! Goal found.
+Statistics: probB08.bwp | Method: A* with H5 | Planlen 9 | Iter 57 | Max queue size: 576
+
+./blocksworld probB0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.02s user 0.00s system 98% cpu 0.024 total
+
+
+
+Success! Goal found.
+Statistics: probB09.bwp | Method: A* with H5 | Planlen 8 | Iter 63 | Max queue size: 674
+
+./blocksworld probB0$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.03s user 0.00s system 95% cpu 0.028 total
+
+
+
+Success! Goal found.
+Statistics: probB10.bwp | Method: A* with H5 | Planlen 9 | Iter 106 | Max queue size: 1084
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.04s user 0.00s system 98% cpu 0.043 total
+
+
+
+Success! Goal found.
+Statistics: probB11.bwp | Method: A* with H5 | Planlen 9 | Iter 31 | Max queue size: 306
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.01s user 0.00s system 96% cpu 0.014 total
+
+
+
+Success! Goal found.
+Statistics: probB12.bwp | Method: A* with H5 | Planlen 10 | Iter 84 | Max queue size: 1054
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.04s user 0.00s system 98% cpu 0.037 total
+
+
+
+Success! Goal found.
+Statistics: probB13.bwp | Method: A* with H5 | Planlen 13 | Iter 693 | Max queue size: 6573
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.27s user 0.00s system 99% cpu 0.270 total
+
+
+
+Success! Goal found.
+Statistics: probB14.bwp | Method: A* with H5 | Planlen 17 | Iter 17144 | Max queue size: 133577
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  6.64s user 0.05s system 99% cpu 6.690 total
+
+
+
+Success! Goal found.
+Statistics: probB15.bwp | Method: A* with H5 | Planlen 16 | Iter 1234 | Max queue size: 11588
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.49s user 0.00s system 99% cpu 0.498 total
+
+
+
+Success! Goal found.
+Statistics: probB16.bwp | Method: A* with H5 | Planlen 18 | Iter 5005 | Max queue size: 39950
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  1.89s user 0.02s system 99% cpu 1.910 total
+
+
+
+Success! Goal found.
+Statistics: probB17.bwp | Method: A* with H5 | Planlen 16 | Iter 773 | Max queue size: 7689
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  0.31s user 0.00s system 99% cpu 0.312 total
+
+
+
+Success! Goal found.
+Statistics: probB18.bwp | Method: A* with H5 | Planlen 14 | Iter 2644 | Max queue size: 22682
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  1.08s user 0.01s system 99% cpu 1.088 total
+
+
+
+Success! Goal found.
+Statistics: probB19.bwp | Method: A* with H5 | Planlen 16 | Iter 16031 | Max queue size: 101866
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  5.85s user 0.04s system 99% cpu 5.898 total
+
+
+
+Success! Goal found.
+Statistics: probB20.bwp | Method: A* with H5 | Planlen 18 | Iter 11288 | Max queue size: 85595
+
+./blocksworld probB$i.bwp -H$H dp >> ./Outputs/timingDataH$H.txt  4.36s user 0.03s system 99% cpu 4.392 total
+
+
+

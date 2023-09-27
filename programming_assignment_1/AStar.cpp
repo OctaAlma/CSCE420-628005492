@@ -1,13 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <utility>
-
-#include <queue>
-#include <string>
-#include <unordered_map>
-
-#include "BlockStack.hpp"
-#include "Heuristics.hpp"
+#include "AStar.hpp"
 
 bool equals(BlockStack & b1, BlockStack & b2){
     if (b1.getKey() == b2.getKey()){
