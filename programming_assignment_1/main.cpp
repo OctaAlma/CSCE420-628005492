@@ -19,7 +19,7 @@ int main(int argc, char** argv){
 
     if (argc < 2){
         cout << "\nusage: ./blocksworld FILENAME" << endl;
-        cout << "Options:    -H# - specify whether to use heuristic function 0-3";
+        cout << "Options:    -H<int> - specify which heuristic function to use 0-6";
         cout << "\n            -MAX_ITERS <int> - specify the maximum number of iterations allowed for A*\n";
         cout << "\n            -dp - Do not print out the solution path\n\n";
         exit(0);
@@ -44,10 +44,23 @@ int main(int argc, char** argv){
                 HEURISTIC = std::stoi(currArg);
             }
         }
+        
+        if (currArg == "H" || currArg == "-H"){
+            if ((i + 1) < argc){
+                HEURISTIC = std::stoi(argv[i + 1]);
+            }else{
+                std::cout << "Please specify the heuristic to use." << std::endl;
+                exit(0);
+            }
+        }
 
-        if (currArg == "MAX_ITERS"){
+
+        if (currArg == "MAX_ITERS" || currArg == "-MAX_ITERS"){
             if ((i + 1) < argc){
                 maxIterations = std::stoi(argv[i + 1]);
+            }else{
+                std::cout << "Please specify the MAX_ITERS argument.\n";
+                exit(0);
             }
         }
 
