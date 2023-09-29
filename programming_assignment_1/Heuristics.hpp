@@ -316,6 +316,20 @@ bool BlockStack::operator<(BlockStack const& other) const {
             return (H0(*this) + this->depth) > (H0(other) + other.depth);
         case 1:
             return (H1(*this) + this->depth) > (H1(other) + other.depth);
+        case 2:
+            return (H2(*this) + this->depth) > (H2(other) + other.depth);
+        case 3:
+            return (H3(*this) + this->depth) > (H3(other) + other.depth);
+        case 4:
+            return (H4(*this) + this->depth) > (H4(other) + other.depth);
+        case 5:
+            return (H5(*this) + this->depth) > (H5(other) + other.depth);
+        case 6:
+            return (H6(*this) + this->depth) > (H6(other) + other.depth);
+        case 7:
+            return (H7(*this) + this->depth) > (H7(other) + other.depth);
+        default:
+            return (H5(*this) + this->depth) > (H5(other) + other.depth);
     }
 
     return false;
@@ -323,6 +337,8 @@ bool BlockStack::operator<(BlockStack const& other) const {
 
 int getHeuristicVal(BlockStack const& bs){
     switch(HEURISTIC){
+        case 0:
+            return (H0(bs));
         case 1:
             return (H1(bs));
         case 2:

@@ -4,6 +4,8 @@ The code requires standard C++ libraries.
 Note: The code was tested on my compute.cs.edu server.
        - The g++ version on my server was 4.8.5
        - I specify the use of the C++11 standard on my makefile
+       - Some of the performance metrics I got on the server did not match the ones on my computer.
+         I ran the same code on both machines and would sometimes get better results on my macbook and sometimes on the server.
 
 To compile the code, simply enter "make" while inside the programming_assignment_1 folder.
 
