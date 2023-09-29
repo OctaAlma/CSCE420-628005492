@@ -11,17 +11,17 @@ Once the code is compiled, run it using the following format:
 
     ./blocksworld FILENAME
 
-The program also features the following options:
-
     - For FILENAME, only put the name of the file in the probs folder. DO NOT SPECIFY the path.
+
+The program also features the following options:
     
-    - The optional -H <int> specifies the heuristic the program should use. 
+    - The option -H <int> specifies the heuristic the program should use. 
       If not specified, heuristic 5 will be used. # should range from 0-7.
       When specifying, please type "-H#" (e.g -H2).
     
-    - The optional -dp tells the program to NOT print the solution path in the terminal if a solution is found.
+    - The option -dp tells the program to NOT print the solution path in the terminal if a solution is found.
 
-    - The -MAX_ITERS <int> specifies the maximum number of iterations that should be attempted by A*. 
+    - The option -MAX_ITERS <int> specifies the maximum number of iterations that should be attempted by A*. 
       Default is 1,000,000
 
 For any questions regarding the implementation, please contact me at oa5967@tamu.edu
