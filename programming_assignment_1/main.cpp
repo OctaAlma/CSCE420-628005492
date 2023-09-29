@@ -6,7 +6,8 @@
 
 using namespace std;
 
-int HEURISTIC = 2;
+int HEURISTIC = 5; // Default case is to use H5
+
 std::vector< std::list<Block> > goalState;
 
 void makeAllCaps(string& str){
@@ -19,7 +20,7 @@ int main(int argc, char** argv){
 
     if (argc < 2){
         cout << "\nusage: ./blocksworld FILENAME" << endl;
-        cout << "Options:    -H<int> - specify which heuristic function to use 0-6";
+        cout << "Options:    -H<int> - specify which heuristic function to use 0-7. Default is heuristic 5.";
         cout << "\n            -MAX_ITERS <int> - specify the maximum number of iterations allowed for A*\n";
         cout << "\n            -dp - Do not print out the solution path\n\n";
         exit(0);
@@ -54,7 +55,6 @@ int main(int argc, char** argv){
             }
         }
 
-
         if (currArg == "MAX_ITERS" || currArg == "-MAX_ITERS"){
             if ((i + 1) < argc){
                 maxIterations = std::stoi(argv[i + 1]);
@@ -67,6 +67,7 @@ int main(int argc, char** argv){
         if (currArg == "-DP" || currArg == "DP"){ // Don't print out the path
             printPath = false;
         }
+
     }
 
     BlockStack initialState("./probs/" + fileName, goalState);
@@ -82,6 +83,7 @@ int main(int argc, char** argv){
         if (printPath){
             printMoves(solution, initialState);
         }
+
         printStatistics(fileName, iterations, maxQ, solution.movesMade.size());
     }else{
         printStatistics(fileName, iterations, maxQ, -1);

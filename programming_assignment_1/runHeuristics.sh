@@ -2,8 +2,8 @@
 
 echo "I am gonna run the files on all heuristics"
 
-minHeuristic=6
-maxHeuristic=6
+minHeuristic=5
+maxHeuristic=5
 
 for H in {$minHeuristic..$maxHeuristic}; 
 do

@@ -1,0 +1,139 @@
+Success! Goal found.
+
+<-------- Start Solution Path -------->
+Move 0, Pathcost = 0, Heuristic = 15, f(n) = g(n)+h(n) = 15
+0 |B C J 
+1 |F H 
+2 |A D E I 
+3 |G 
+4 |
+
+Move 1, Pathcost = 1, Heuristic = 15, f(n) = g(n)+h(n) = 16
+0 |B C J 
+1 |F H 
+2 |A D E 
+3 |G I 
+4 |
+
+Move 2, Pathcost = 2, Heuristic = 15, f(n) = g(n)+h(n) = 17
+0 |B C J 
+1 |F 
+2 |A D E 
+3 |G I H 
+4 |
+
+Move 3, Pathcost = 3, Heuristic = 15, f(n) = g(n)+h(n) = 18
+0 |B C J 
+1 |F 
+2 |A D 
+3 |G I H E 
+4 |
+
+Move 4, Pathcost = 4, Heuristic = 13, f(n) = g(n)+h(n) = 17
+0 |B C J 
+1 |F 
+2 |A 
+3 |G I H E 
+4 |D 
+
+Move 5, Pathcost = 5, Heuristic = 13, f(n) = g(n)+h(n) = 18
+0 |B C J 
+1 |F 
+2 |
+3 |G I H E 
+4 |D A 
+
+Move 6, Pathcost = 6, Heuristic = 12, f(n) = g(n)+h(n) = 18
+0 |B C J 
+1 |
+2 |F 
+3 |G I H E 
+4 |D A 
+
+Move 7, Pathcost = 7, Heuristic = 12, f(n) = g(n)+h(n) = 19
+0 |B C 
+1 |
+2 |F J 
+3 |G I H E 
+4 |D A 
+
+Move 8, Pathcost = 8, Heuristic = 10, f(n) = g(n)+h(n) = 18
+0 |B 
+1 |C 
+2 |F J 
+3 |G I H E 
+4 |D A 
+
+Move 9, Pathcost = 9, Heuristic = 8, f(n) = g(n)+h(n) = 17
+0 |B 
+1 |C E 
+2 |F J 
+3 |G I H 
+4 |D A 
+
+Move 10, Pathcost = 10, Heuristic = 7, f(n) = g(n)+h(n) = 17
+0 |B 
+1 |C E 
+2 |F J H 
+3 |G I 
+4 |D A 
+
+Move 11, Pathcost = 11, Heuristic = 7, f(n) = g(n)+h(n) = 18
+0 |
+1 |C E B 
+2 |F J H 
+3 |G I 
+4 |D A 
+
+Move 12, Pathcost = 12, Heuristic = 6, f(n) = g(n)+h(n) = 18
+0 |A 
+1 |C E B 
+2 |F J H 
+3 |G I 
+4 |D 
+
+Move 13, Pathcost = 13, Heuristic = 4, f(n) = g(n)+h(n) = 17
+0 |A I 
+1 |C E B 
+2 |F J H 
+3 |G 
+4 |D 
+
+Move 14, Pathcost = 14, Heuristic = 3, f(n) = g(n)+h(n) = 17
+0 |A I 
+1 |C E 
+2 |F J H 
+3 |G 
+4 |D B 
+
+Move 15, Pathcost = 15, Heuristic = 3, f(n) = g(n)+h(n) = 18
+0 |A I 
+1 |C E 
+2 |F J 
+3 |G 
+4 |D B H 
+
+Move 16, Pathcost = 16, Heuristic = 2, f(n) = g(n)+h(n) = 18
+0 |A I J 
+1 |C E 
+2 |F 
+3 |G 
+4 |D B H 
+
+Move 17, Pathcost = 17, Heuristic = 1, f(n) = g(n)+h(n) = 18
+0 |A I J 
+1 |C E 
+2 |F G 
+3 |
+4 |D B H 
+
+Move 18, Pathcost = 18, Heuristic = 0, f(n) = g(n)+h(n) = 18
+0 |A I J 
+1 |C E 
+2 |F G H 
+3 |
+4 |D B 
+<--------- End Solution Path --------->
+
+Statistics: probB20.bwp | Method: A* with H5 | Planlen 18 | Iter 11288 | Max queue size: 85595
+

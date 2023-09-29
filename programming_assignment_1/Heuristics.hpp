@@ -38,7 +38,7 @@ int const H0(const BlockStack& bs){
     return 0;
 }
 
-// Returns the sum of the absolute values of each block's current position - goal position. Not admissable. 
+// Returns the sum of the absolute values of each block's current position - goal position. 
 int const H1(const BlockStack& bs){
     std::list<Block> currList;
     std::list<Block>::iterator currBlock;
@@ -65,7 +65,7 @@ int const H1(const BlockStack& bs){
     return heuristicVal;
 }
 
-// Returns the number of blocks that are not in the right stack. Admissable
+// Returns the number of blocks that are not in the right stack.
 int const H2(const BlockStack& bs){
     std::list<Block> currList;
     std::list<Block>::iterator currBlock;
@@ -93,7 +93,7 @@ int const H2(const BlockStack& bs){
     return heuristicVal;
 }
 
-// Returns the number of blocks that are not in the right row. Not admissable
+// Returns the number of blocks that are not in the right row.
 int const H3(const BlockStack& bs){
     std::list<Block> currList;
     std::list<Block>::iterator currBlock;
@@ -121,7 +121,7 @@ int const H3(const BlockStack& bs){
     return heuristicVal;
 }
 
-// Returns the number of blocks that are not in the right position. Admissable
+// Returns the number of blocks that are not in the right position. 
 int const H4(const BlockStack& bs){
     std::list<Block> currList;
     std::list<Block>::iterator currBlock;
@@ -149,8 +149,8 @@ int const H4(const BlockStack& bs){
     return heuristicVal;
 }
 
-/* Same H4, except it looks at the block below the current block (if applicable) 
-and adds an extra point if the block below is not in the correct position. Not admissable */
+/* Same as H4 but it also looks at the block below the current block (if applicable) 
+and increments the heuristic value if the block below is not in the correct position.*/
 int const H5(const BlockStack& bs){
     int heuristicVal = 0;
 
@@ -169,18 +169,20 @@ int const H5(const BlockStack& bs){
             Coords currCoord(i, currRow, currBlock->letter);
             Coords inGoal = findInGoal(currBlock->letter);
             
+            // If the current block is not in the correct position, increment the heuristic value by 1
             bool currBlockInRightPos = (currCoord.col == inGoal.col) && (currCoord.row == inGoal.row);
             if (!currBlockInRightPos){
                 heuristicVal++;
             }
 
+            // if there is a block below the current block, check if it is in the correct place
+            // If the block below is not in the correct place, increment the heuristic value by 1
             if (!(currList.size() == 1 || currBlock == currList.begin())){
                 bool prevBlockInRightPos = (prevGoalCoords.col == prevCoords.col) && (prevGoalCoords.row == prevCoords.row);
                 if (!prevBlockInRightPos){
                     heuristicVal++;
                 }
             }
-
 
             prevGoalCoords = inGoal;
             prevCoords = currCoord;
@@ -192,7 +194,7 @@ int const H5(const BlockStack& bs){
 }
 
 /* Will return the number of blocks in all stacks - the number of continuous blocks in the 
-correct place from the bottom to the stop of each stack. Not admissable */
+correct place from the bottom to the stop of each stack.*/
 int const H6(const BlockStack& bs){
     int heuristicVal = goalCoords.size();
 
@@ -222,8 +224,60 @@ int const H6(const BlockStack& bs){
     return heuristicVal;
 }
 
-/* Attempts to score a current configuration of th blocksworld problem by determining which blocks are out of place, 
-and assigning them a score depending on how "out of place" they are. */
+/* Same as H6, but it also increments the heuristic if it finds blocks that are
+stuck under a block that belongs in the current stack. */
+int const H7(const BlockStack& bs){
+    int heuristicVal = goalCoords.size();
+
+    std::list<Block> currList;
+    std::list<Block>::iterator currBlock;
+
+    for (int i = 0; i < bs.numCols; i++){
+        
+        // Create a copy of the list to keep the const 
+        currList = (bs.blockColumns.at(i));
+
+        int currRow = 0;
+        for (currBlock = currList.begin(); currBlock != currList.end(); ++currBlock){
+            Coords currCoord(i, currRow, currBlock->letter);
+            Coords inGoal = findInGoal(currBlock->letter);
+
+            if (currCoord.col == inGoal.col && currCoord.row == inGoal.row){
+                heuristicVal--;
+            }else{
+                break;
+            }
+
+            currRow++;
+        }
+
+        // Count the number of stuck blocks in the current stack:
+        currRow = 0;
+        for (currBlock = currList.begin(); currBlock != currList.end(); ++currBlock){
+            Coords currCoord(i, currRow, currBlock->letter);
+            Coords inGoal = findInGoal(currBlock->letter);
+
+            // Check if the current block is stuck between
+            if ((currBlock!=currList.end()) && (inGoal.col != currCoord.col)){
+                std::list<Block>::iterator topBlock = currList.begin();
+                std::advance(topBlock, currRow + 1);
+
+                Coords topBlockGoalCoords = findInGoal(topBlock->letter);
+                // Check if the topBlock is the correct stack. If so, this is bad for the current block, so we increase the heuristic
+                if (topBlockGoalCoords.col == (i)){
+                    heuristicVal += (currList.size() - currRow); // Add the depth of the current block rather than just 1
+                }
+
+            }
+            
+            currRow++;
+        }
+
+    }
+
+    return heuristicVal;
+}
+
 
 void printStatistics(std::string filename, int iterations, size_t maxQ, int planLen){
     // ‘iters’ is a count of the number of times through the main loop; 
@@ -247,6 +301,12 @@ void printStatistics(std::string filename, int iterations, size_t maxQ, int plan
 
     std::cout << "Iter " << iterations << " | ";
     std::cout << "Max queue size: " << maxQ << "\n\n";
+
+
+}
+
+void printStatisticsCSV(std::string filename, int iterations, size_t maxQ, int planLen){
+    std::cout << filename << "," << HEURISTIC << "," << planLen << "," << iterations << "," << maxQ << "\n";
 }
 
 
@@ -264,19 +324,21 @@ bool BlockStack::operator<(BlockStack const& other) const {
 int getHeuristicVal(BlockStack const& bs){
     switch(HEURISTIC){
         case 1:
-            return (H1(bs) + bs.depth);
+            return (H1(bs));
         case 2:
-            return (H2(bs) + bs.depth);
+            return (H2(bs));
         case 3:
-            return (H3(bs) + bs.depth);
+            return (H3(bs));
         case 4:
-            return (H4(bs) + bs.depth);
+            return (H4(bs));
         case 5:
-            return (H5(bs) + bs.depth);
+            return (H5(bs));
         case 6:
-            return (H6(bs) + bs.depth);
-        default: // the default case is H4
-            return (H4(bs) + bs.depth);
+            return (H6(bs));
+        case 7:
+            return (H7(bs));
+        default: // the default case is H5
+            return (H5(bs));
     }
     return -1;
 }
@@ -284,6 +346,8 @@ int getHeuristicVal(BlockStack const& bs){
 struct compareStacks{
     bool operator()(BlockStack const& b1, BlockStack const& b2){
         switch(HEURISTIC){
+            case 0: 
+                return (H0(b1) + b1.depth) > (H0(b2) + b2.depth); 
             case 1:
                 return (H1(b1) + b1.depth) > (H1(b2) + b2.depth);
             case 2:
@@ -296,8 +360,10 @@ struct compareStacks{
                 return (H5(b1) + b1.depth) > (H5(b2) + b2.depth);
             case 6:
                 return (H6(b1) + b1.depth) > (H6(b2) + b2.depth);
-            default: // the default case is H4
-                return (H4(b1) + b1.depth) > (H4(b2) + b2.depth);
+            case 7:
+                return (H7(b1) + b1.depth) > (H7(b2) + b2.depth);
+            default: // the default case is H5
+                return (H5(b1) + b1.depth) > (H5(b2) + b2.depth);
         }
         return false;
     }

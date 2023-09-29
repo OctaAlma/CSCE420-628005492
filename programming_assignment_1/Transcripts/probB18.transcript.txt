@@ -1,0 +1,111 @@
+Success! Goal found.
+
+<-------- Start Solution Path -------->
+Move 0, Pathcost = 0, Heuristic = 16, f(n) = g(n)+h(n) = 16
+0 |A B 
+1 |F H 
+2 |C G 
+3 |D E I J 
+4 |
+
+Move 1, Pathcost = 1, Heuristic = 15, f(n) = g(n)+h(n) = 16
+0 |A B 
+1 |F 
+2 |C G 
+3 |D E I J 
+4 |H 
+
+Move 2, Pathcost = 2, Heuristic = 15, f(n) = g(n)+h(n) = 17
+0 |A B 
+1 |
+2 |C G 
+3 |D E I J 
+4 |H F 
+
+Move 3, Pathcost = 3, Heuristic = 13, f(n) = g(n)+h(n) = 16
+0 |A 
+1 |B 
+2 |C G 
+3 |D E I J 
+4 |H F 
+
+Move 4, Pathcost = 4, Heuristic = 11, f(n) = g(n)+h(n) = 15
+0 |A 
+1 |B G 
+2 |C 
+3 |D E I J 
+4 |H F 
+
+Move 5, Pathcost = 5, Heuristic = 12, f(n) = g(n)+h(n) = 17
+0 |A F 
+1 |B G 
+2 |C 
+3 |D E I J 
+4 |H 
+
+Move 6, Pathcost = 6, Heuristic = 11, f(n) = g(n)+h(n) = 17
+0 |A F 
+1 |B G H 
+2 |C 
+3 |D E I J 
+4 |
+
+Move 7, Pathcost = 7, Heuristic = 10, f(n) = g(n)+h(n) = 17
+0 |A 
+1 |B G H F 
+2 |C 
+3 |D E I J 
+4 |
+
+Move 8, Pathcost = 8, Heuristic = 9, f(n) = g(n)+h(n) = 17
+0 |
+1 |B G H F 
+2 |C 
+3 |D E I J 
+4 |A 
+
+Move 9, Pathcost = 9, Heuristic = 8, f(n) = g(n)+h(n) = 17
+0 |
+1 |B G H 
+2 |C 
+3 |D E I J 
+4 |A F 
+
+Move 10, Pathcost = 10, Heuristic = 6, f(n) = g(n)+h(n) = 16
+0 |
+1 |B G H 
+2 |C 
+3 |D E I 
+4 |A F J 
+
+Move 11, Pathcost = 11, Heuristic = 4, f(n) = g(n)+h(n) = 15
+0 |
+1 |B G H I 
+2 |C 
+3 |D E 
+4 |A F J 
+
+Move 12, Pathcost = 12, Heuristic = 2, f(n) = g(n)+h(n) = 14
+0 |
+1 |B G H I 
+2 |C 
+3 |D 
+4 |A F J E 
+
+Move 13, Pathcost = 13, Heuristic = 1, f(n) = g(n)+h(n) = 14
+0 |C 
+1 |B G H I 
+2 |
+3 |D 
+4 |A F J E 
+
+Move 14, Pathcost = 14, Heuristic = 0, f(n) = g(n)+h(n) = 14
+0 |C 
+1 |B G H I 
+2 |D 
+3 |
+4 |A F J E 
+<--------- End Solution Path --------->
+
+Statistics: probB18.bwp | Method: A* with H5 | Planlen 14 | Iter 2644 | Max queue size: 22682
+

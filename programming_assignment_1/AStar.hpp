@@ -44,7 +44,7 @@ void printMoves(BlockStack goal, BlockStack initialState){
 
 }
 
-// AStar will return a vector of std::pairs representing a source and dest col
+// AStar will return a BlockStack object where the movesMade member variable contains all moves necessary to create the solution from the initial state
 BlockStack AStar(BlockStack initialState, int maxIters, int& numIters, size_t& maxQ){
 
     int maxDepth = initialState.stepsForScramble;
@@ -62,24 +62,29 @@ BlockStack AStar(BlockStack initialState, int maxIters, int& numIters, size_t& m
 
     while (!frontier.empty() && numIters <= maxIters){
         
+        // Update the max queue size if applicable
         if (frontier.size() > maxQ){
             maxQ = frontier.size();
         }
 
+        // Extract the value at the top of the priority queue
         BlockStack currState = frontier.top();
         frontier.pop();
 
+        // Check if the current configuration is equal to the goal state
         if (equals(currState, GS)){
             std::cout << "Success! Goal found." << std::endl;
             return currState;
         }
-        
-        std::vector<BlockStack> children = currState.createChildren();
 
         if (currState.depth + 1 > maxDepth){
             continue;
         }
         
+        // createChildren() is equivalent to the successor() function
+        std::vector<BlockStack> children = currState.createChildren();
+        
+        // Iterate through the created children and check if they should be pushed to the frontier
         for (int i = 0; i < children.size(); i++){
 
             children.at(i).depth = currState.depth + 1;
@@ -101,6 +106,7 @@ BlockStack AStar(BlockStack initialState, int maxIters, int& numIters, size_t& m
 
         numIters++;
     }
+
     std::cout << "Could not find solutions under " << maxIters << " iterations.\n";
     return initialState;
 }

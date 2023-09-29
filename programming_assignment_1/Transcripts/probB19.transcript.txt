@@ -1,0 +1,125 @@
+Success! Goal found.
+
+<-------- Start Solution Path -------->
+Move 0, Pathcost = 0, Heuristic = 15, f(n) = g(n)+h(n) = 15
+0 |
+1 |D F 
+2 |B C E G I 
+3 |A 
+4 |H J 
+
+Move 1, Pathcost = 1, Heuristic = 14, f(n) = g(n)+h(n) = 15
+0 |I 
+1 |D F 
+2 |B C E G 
+3 |A 
+4 |H J 
+
+Move 2, Pathcost = 2, Heuristic = 15, f(n) = g(n)+h(n) = 17
+0 |I 
+1 |D F 
+2 |B C E G 
+3 |A J 
+4 |H 
+
+Move 3, Pathcost = 3, Heuristic = 15, f(n) = g(n)+h(n) = 18
+0 |I 
+1 |D F 
+2 |B C E 
+3 |A J G 
+4 |H 
+
+Move 4, Pathcost = 4, Heuristic = 14, f(n) = g(n)+h(n) = 18
+0 |I E 
+1 |D F 
+2 |B C 
+3 |A J G 
+4 |H 
+
+Move 5, Pathcost = 5, Heuristic = 14, f(n) = g(n)+h(n) = 19
+0 |I E H 
+1 |D F 
+2 |B C 
+3 |A J G 
+4 |
+
+Move 6, Pathcost = 6, Heuristic = 12, f(n) = g(n)+h(n) = 18
+0 |I E H 
+1 |D F 
+2 |B C 
+3 |A J 
+4 |G 
+
+Move 7, Pathcost = 7, Heuristic = 10, f(n) = g(n)+h(n) = 17
+0 |I E H 
+1 |D F 
+2 |B C 
+3 |A 
+4 |G J 
+
+Move 8, Pathcost = 8, Heuristic = 9, f(n) = g(n)+h(n) = 17
+0 |I E 
+1 |D F 
+2 |B C 
+3 |A 
+4 |G J H 
+
+Move 9, Pathcost = 9, Heuristic = 7, f(n) = g(n)+h(n) = 16
+0 |I E 
+1 |D 
+2 |B C 
+3 |A 
+4 |G J H F 
+
+Move 10, Pathcost = 10, Heuristic = 6, f(n) = g(n)+h(n) = 16
+0 |I E 
+1 |D 
+2 |B C 
+3 |
+4 |G J H F A 
+
+Move 11, Pathcost = 11, Heuristic = 4, f(n) = g(n)+h(n) = 15
+0 |I E 
+1 |D 
+2 |B 
+3 |
+4 |G J H F A C 
+
+Move 12, Pathcost = 12, Heuristic = 3, f(n) = g(n)+h(n) = 15
+0 |I E 
+1 |
+2 |B 
+3 |
+4 |G J H F A C D 
+
+Move 13, Pathcost = 13, Heuristic = 3, f(n) = g(n)+h(n) = 16
+0 |I 
+1 |E 
+2 |B 
+3 |
+4 |G J H F A C D 
+
+Move 14, Pathcost = 14, Heuristic = 2, f(n) = g(n)+h(n) = 16
+0 |
+1 |E 
+2 |B 
+3 |
+4 |G J H F A C D I 
+
+Move 15, Pathcost = 15, Heuristic = 1, f(n) = g(n)+h(n) = 16
+0 |B 
+1 |E 
+2 |
+3 |
+4 |G J H F A C D I 
+
+Move 16, Pathcost = 16, Heuristic = 0, f(n) = g(n)+h(n) = 16
+0 |B E 
+1 |
+2 |
+3 |
+4 |G J H F A C D I 
+<--------- End Solution Path --------->
+
+Statistics: probB19.bwp | Method: A* with H5 | Planlen 16 | Iter 16031 | Max queue size: 101866
+

@@ -1,3 +1,5 @@
+Octavio Almanza
+
 The code requires standard C++ libraries.
 Note: The code was tested on my compute.cs.edu server.
        - The g++ version on my server was 4.8.5

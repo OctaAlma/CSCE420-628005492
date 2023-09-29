@@ -1,0 +1,76 @@
+Success! Goal found.
+
+<-------- Start Solution Path -------->
+Move 0, Pathcost = 0, Heuristic = 10, f(n) = g(n)+h(n) = 10
+0 |
+1 |F 
+2 |E J 
+3 |B C H I 
+4 |A D G 
+
+Move 1, Pathcost = 1, Heuristic = 9, f(n) = g(n)+h(n) = 10
+0 |I 
+1 |F 
+2 |E J 
+3 |B C H 
+4 |A D G 
+
+Move 2, Pathcost = 2, Heuristic = 8, f(n) = g(n)+h(n) = 10
+0 |I 
+1 |
+2 |E J 
+3 |B C H F 
+4 |A D G 
+
+Move 3, Pathcost = 3, Heuristic = 6, f(n) = g(n)+h(n) = 9
+0 |I 
+1 |
+2 |E J 
+3 |B C H F G 
+4 |A D 
+
+Move 4, Pathcost = 4, Heuristic = 5, f(n) = g(n)+h(n) = 9
+0 |I J 
+1 |
+2 |E 
+3 |B C H F G 
+4 |A D 
+
+Move 5, Pathcost = 5, Heuristic = 4, f(n) = g(n)+h(n) = 9
+0 |I J 
+1 |
+2 |
+3 |B C H F G E 
+4 |A D 
+
+Move 6, Pathcost = 6, Heuristic = 3, f(n) = g(n)+h(n) = 9
+0 |I J 
+1 |D 
+2 |
+3 |B C H F G E 
+4 |A 
+
+Move 7, Pathcost = 7, Heuristic = 2, f(n) = g(n)+h(n) = 9
+0 |I J 
+1 |D 
+2 |A 
+3 |B C H F G E 
+4 |
+
+Move 8, Pathcost = 8, Heuristic = 1, f(n) = g(n)+h(n) = 9
+0 |I 
+1 |D 
+2 |A 
+3 |B C H F G E 
+4 |J 
+
+Move 9, Pathcost = 9, Heuristic = 0, f(n) = g(n)+h(n) = 9
+0 |I 
+1 |
+2 |A D 
+3 |B C H F G E 
+4 |J 
+<--------- End Solution Path --------->
+
+Statistics: probB11.bwp | Method: A* with H5 | Planlen 9 | Iter 31 | Max queue size: 306
+

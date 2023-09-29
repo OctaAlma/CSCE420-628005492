@@ -1,0 +1,8 @@
+*.csv
+CSV/
+Outputs/
+runHeuristics.sh
+runCSV.sh
+BlockStack.o
+main.o
+blocksworld
