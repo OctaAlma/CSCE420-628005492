@@ -1,3 +1,6 @@
+#ifndef KNOWLEDGE_BASE
+#define KNOWLEDGE_BASE
+
 #include <iostream> 
 #include <unordered_map>
 #include <vector>
@@ -47,6 +50,33 @@ struct CNFSentence{
 
         return eval;
     }
+
+    // If the sentence has a unit literal, returns a pointer to the literal that is not set yet
+    // Otherwise, returns NULL
+    std::shared_ptr<CNFLiteral> isUnitClause(){
+        if (literals.size() == 1){
+            return literals.at(0);
+        }
+
+        std::shared_ptr<CNFLiteral> unitLiteral = NULL;
+
+        int numNotSet = 0;
+
+        for (auto currLiteral = literals.begin(); currLiteral != literals.end(); currLiteral++){
+            if ((*currLiteral)->assign == NOT_SET){
+
+                if (unitLiteral != NULL){
+                    return NULL;
+                }
+                else{
+                    unitLiteral = (*currLiteral);
+                }
+
+            }
+        }
+
+        return unitLiteral;
+    }
 };
 
 class CNFKnowledgeBase{
@@ -57,6 +87,7 @@ class CNFKnowledgeBase{
     public:
     void loadKB(std::string filename);
     void addLiteral(std::string s);
+    void addLiterals(int argc, char** argv);
     void assignModel(std::vector<ASSIGNMENT>& model);
 
     // Every index in model T corresponds to the assignment of a literal in literalNames
@@ -65,3 +96,4 @@ class CNFKnowledgeBase{
     bool checkAssignment(std::vector<ASSIGNMENT>& model);
 };
 
+#endif

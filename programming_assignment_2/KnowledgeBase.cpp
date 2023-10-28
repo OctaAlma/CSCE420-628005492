@@ -77,6 +77,7 @@ void CNFKnowledgeBase::addLiteral(std::string literalName){
     }
 
     l->name = literalName;
+    l->assign = NOT_SET;
 
     if (find(literalNames.begin(), literalNames.end(), literalName) == literalNames.end()){
         literalNames.push_back(literalName);
@@ -85,6 +86,18 @@ void CNFKnowledgeBase::addLiteral(std::string literalName){
     auto s = make_shared<CNFSentence>();
     s->literals.push_back(l);
     sentences.push_back(s);
+}
+
+void CNFKnowledgeBase::addLiterals(int argc, char** argv){
+    for (int i = 0; i < argc; i++){
+        string currLiteralName = argv[i];
+
+        if (currLiteralName == "+UCH"){
+            continue;
+        }
+
+        addLiteral(currLiteralName);
+    }
 }
 
 void CNFKnowledgeBase::assignModel(std::vector<ASSIGNMENT>& model){
@@ -135,14 +148,12 @@ bool CNFKnowledgeBase::checkAssignment(std::vector<ASSIGNMENT>& model){
     assignModel(model);
 
     for (auto currSentence = sentences.begin(); currSentence != sentences.end(); currSentence++){
-        
+        if ((*currSentence)->evalSentence() == TRUE){
+            continue;
+        }else{
+            return false;
+        }
     }
 
-    return false;
-}
-
-int main(){
-    auto kb = CNFKnowledgeBase();
-
-    kb.loadKB("cool.dimacs");
+    return true;
 }
