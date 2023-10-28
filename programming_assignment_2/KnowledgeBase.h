@@ -15,36 +15,45 @@ enum Assignments{
     TRUE
 };
 
-struct CNFLiteral{
+struct Literal{
     std::string name;
-    bool negated;
-    
     int assign;
 
-    CNFLiteral(){
-        name = "";
-        negated = false;
-        assign = FALSE;
-    }
+    Literal(): name(""), assign(NOT_SET){}
+    Literal(std::string name, ASSIGNMENT assign):name(name), assign(assign){}
+};
 
-    CNFLiteral(std::string name, bool negated):name(name), negated(negated){
-        assign = FALSE;
-    }
+struct CNFLiteral{
+    std::shared_ptr<Literal> literal;
+    bool negated = false;
+
+    CNFLiteral():literal(NULL), negated(false){}
+    CNFLiteral(std::shared_ptr<Literal> l, bool neg):literal(l), negated(neg){}
 };
 
 struct CNFSentence{
     std::vector<std::shared_ptr<CNFLiteral> > literals; 
 
-    bool eval = false;
-
+    // Returns -1 if there are literals that have not been set
+    // Returns 0 if the sentence evaluates to false
+    // Returns 1 if the sentence evaluates to true
     int evalSentence(){
+        bool eval = false;
 
         for (auto currLiteral = literals.begin(); currLiteral != literals.end(); currLiteral++){
-            if ((*currLiteral)->assign == NOT_SET){
-                std::cout << "Literal " << (*currLiteral)->name << " does not have an assigned value.\n";
+            
+            if ((*currLiteral)->literal->assign == NOT_SET){
+                // std::cout << "Literal " << (*currLiteral)->literal->name << " does not have an assigned value.\n";
                 return -1;
+            
             }else{
-                eval = eval || (*currLiteral)->assign;
+                bool value = (*currLiteral)->literal->assign;
+                
+                if ((*currLiteral)->negated){
+                    value = !value;
+                }
+
+                eval = eval || value;
             }
         }
 
@@ -53,9 +62,9 @@ struct CNFSentence{
 
     // If the sentence has a unit literal, returns a pointer to the literal that is not set yet
     // Otherwise, returns NULL
-    std::shared_ptr<CNFLiteral> isUnitClause(){
+    std::shared_ptr<Literal> isUnitClause(){
         if (literals.size() == 1){
-            return literals.at(0);
+            return literals.at(0)->literal;
         }
 
         std::shared_ptr<CNFLiteral> unitLiteral = NULL;
@@ -63,7 +72,7 @@ struct CNFSentence{
         int numNotSet = 0;
 
         for (auto currLiteral = literals.begin(); currLiteral != literals.end(); currLiteral++){
-            if ((*currLiteral)->assign == NOT_SET){
+            if ((*currLiteral)->literal->assign == NOT_SET){
 
                 if (unitLiteral != NULL){
                     return NULL;
@@ -75,25 +84,53 @@ struct CNFSentence{
             }
         }
 
-        return unitLiteral;
+        return unitLiteral->literal;
+    }
+
+    void printSentence(){
+        std::cout << "[ ";
+
+        for (auto l = literals.begin(); l != literals.end(); l++){
+            
+            if ((*l)->negated){
+                std::cout << "NOT ";    
+            }
+
+            std::cout << (*l)->literal->name;
+
+            if (l != (literals.end() - 1)){
+                std::cout << " OR ";
+            }else{
+                std::cout << " ";
+            }
+        }
+        
+        std::cout << "]\n";
     }
 };
 
 class CNFKnowledgeBase{
     private:
     std::vector<std::shared_ptr<CNFSentence> > sentences;  
-    std::vector<std::string> literalNames;
+    std::vector<std::shared_ptr<Literal> > allLiterals;
+
+    std::shared_ptr<Literal> findLiteral(std::string name);
 
     public:
+    void printKB();
     void loadKB(std::string filename);
-    void addLiteral(std::string s);
-    void addLiterals(int argc, char** argv);
+    void addFact(std::string s);
+    void addFacts(int argc, char** argv);
     void assignModel(std::vector<ASSIGNMENT>& model);
+    std::vector<ASSIGNMENT> extractModel();
+    std::shared_ptr<Literal> findUnassignedLiteral();
+    int findUnassignedLiteralIndex();
 
     // Every index in model T corresponds to the assignment of a literal in literalNames
     // In other words: model.size() == literalNames.size()
     // model.at(i) corresponds to the assignment of literalNames.at(i)
-    bool checkAssignment(std::vector<ASSIGNMENT>& model);
+    ASSIGNMENT checkAssignment(std::vector<ASSIGNMENT>& model);
+    void printAssignments();
 };
 
 #endif
