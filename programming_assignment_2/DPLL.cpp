@@ -17,6 +17,8 @@ bool DPLL_Satisfiable(CNFKnowledgeBase kb, std::shared_ptr<CNFSentence> s){
 }
 
 // Note: It is super important that model is pass by copy rather than pass by reference
+// This will allow copies of the ASSIGNMENT vector to be generated at every DPLL call, preventing
+// Previous models from getting assignments
 bool DPLL(CNFKnowledgeBase kb, std::vector<ASSIGNMENT> model){
     DPLLcalls++;
 
@@ -28,7 +30,16 @@ bool DPLL(CNFKnowledgeBase kb, std::vector<ASSIGNMENT> model){
 
     if (useUCH){
         // apply heuristic
-        // return heuristic
+        std::shared_ptr<CNFLiteral> uc = kb.findUnitClause();
+
+        if (uc != NULL){
+            // There is a unit clause. Find its index in all literals:
+            int ucIndex = kb.getLiteralIndex(uc->literal->name);
+            model[ucIndex] = !uc->negated;
+            cout << "Forcing " << uc->literal->name << " = " << !uc->negated << " by UCH\n";
+            
+            return DPLL(kb, model);
+        }
     }
 
     int unassignedIndex = kb.findUnassignedLiteralIndex();

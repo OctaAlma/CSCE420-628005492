@@ -40,10 +40,12 @@ struct CNFSentence{
     int evalSentence(){
         bool eval = false;
 
+        bool notSet = false;
+
         for (auto currLiteral = literals.begin(); currLiteral != literals.end(); currLiteral++){
             
             if ((*currLiteral)->literal->assign == NOT_SET){
-                return -1;
+                notSet = true;
             
             }else{
                 bool value = (*currLiteral)->literal->assign;
@@ -55,35 +57,45 @@ struct CNFSentence{
                 eval = eval || value;
             }
         }
+        
+        if (eval){
+            return eval;
+        }
+
+        if (notSet){
+            return -1;
+        }
 
         return eval;
     }
 
-    // If the sentence has a unit literal, returns a pointer to the literal that is not set yet
+    // If the sentence has a unit literal, returns a pointer to the literal that has to be true
     // Otherwise, returns NULL
     std::shared_ptr<CNFLiteral> isUnitClause(){
-        if (literals.size() == 1){
-            return literals.at(0);
+        
+        int eval = evalSentence();
+        
+        if (eval != NOT_SET){
+            return NULL;
         }
 
-        std::shared_ptr<CNFLiteral> unitLiteral = NULL;
+        int numNOTSET = 0;
+        std::shared_ptr<CNFLiteral> uc = NULL;
+    
+        for (int i = 0; i < literals.size(); i++){
+            auto curr = literals.at(i);
 
-        int numNotSet = 0;
-
-        for (auto currLiteral = literals.begin(); currLiteral != literals.end(); currLiteral++){
-            if ((*currLiteral)->literal->assign == NOT_SET){
-
-                if (unitLiteral != NULL){
-                    return NULL;
-                }
-                else{
-                    unitLiteral = (*currLiteral);
-                }
-
+            if (curr->literal->assign == NOT_SET){
+                numNOTSET++;
+                uc = curr;
             }
         }
 
-        return unitLiteral;
+        if (numNOTSET == 1){
+            return uc;
+        }
+
+        return NULL;
     }
 
     void printSentence(){
@@ -124,6 +136,7 @@ class CNFKnowledgeBase{
     std::vector<ASSIGNMENT> extractModel();
     std::shared_ptr<Literal> findUnassignedLiteral();
     int findUnassignedLiteralIndex();
+    std::shared_ptr<CNFLiteral> findUnitClause();
 
     // Every index in model T corresponds to the assignment of a literal in literalNames
     // In other words: model.size() == literalNames.size()
@@ -132,6 +145,8 @@ class CNFKnowledgeBase{
     void printAssignments();
     void printTruePropositions();
     std::string getLiteralName(int index);
+    int getLiteralIndex(std::string lName);
+
 };
 
 #endif

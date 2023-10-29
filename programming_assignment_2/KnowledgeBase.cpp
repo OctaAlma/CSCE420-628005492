@@ -212,6 +212,22 @@ int CNFKnowledgeBase::findUnassignedLiteralIndex(){
     return -1;
 }
 
+// Returns NULL if there are no unit clauses in the KB
+// Otherwise, returns a pointer to the CNF Literal object in the sentence
+std::shared_ptr<CNFLiteral> CNFKnowledgeBase::findUnitClause(){
+    std::shared_ptr<CNFLiteral> uc = NULL;
+
+    for (int i = 0; i < sentences.size(); i++){
+        uc = sentences.at(i)->isUnitClause();
+
+        if (uc != NULL){
+            return uc;
+        }
+    }
+
+    return NULL;
+}
+
 std::string CNFKnowledgeBase::getLiteralName(int index){
 
     if (index < 0 || index >= allLiterals.size()){
@@ -221,4 +237,14 @@ std::string CNFKnowledgeBase::getLiteralName(int index){
     }
 
     return allLiterals.at(index)->name;
+}
+
+int CNFKnowledgeBase::getLiteralIndex(std::string lName){
+    for (int i = 0; i < allLiterals.size(); i++){
+        if (lName == allLiterals.at(i)->name){
+            return i;
+        }
+    }
+
+    return -1;
 }

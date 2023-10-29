@@ -1,7 +1,7 @@
 clauses = []
 
 # HAS TO BE GREATER THAN 3
-n = 4
+n = 15
 
 for col in range(1, n+1, 1):
     for row in range(1, n+1, 1):
@@ -22,7 +22,7 @@ for col in range(1, n+1, 1):
                 continue
 
             # If a queen is in column j, there cannot be a queen in column j
-            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(col) + str(otherRow) + "))")
+            clauses.append("(implies Q" + str(col) + "_"+ str(row) + " (not Q" + str(col) + str(otherRow) + "))")
 
 
 # Queens should not be able to attack each other diagonally
