@@ -3,6 +3,7 @@
 using namespace std;
 
 bool useUCH = false;
+unsigned int DPLLcalls = 0;
 
 bool DPLL_Satisfiable(CNFKnowledgeBase kb, std::shared_ptr<CNFSentence> s){
     
@@ -17,7 +18,8 @@ bool DPLL_Satisfiable(CNFKnowledgeBase kb, std::shared_ptr<CNFSentence> s){
 
 // Note: It is super important that model is pass by copy rather than pass by reference
 bool DPLL(CNFKnowledgeBase kb, std::vector<ASSIGNMENT> model){
-    
+    DPLLcalls++;
+
     int modelCheck = kb.checkAssignment(model);
     
     if (modelCheck != NOT_SET){
@@ -30,14 +32,17 @@ bool DPLL(CNFKnowledgeBase kb, std::vector<ASSIGNMENT> model){
     }
 
     int unassignedIndex = kb.findUnassignedLiteralIndex();
+    string lName = kb.getLiteralName(unassignedIndex);
     
+    cout << "Trying " << lName << " = T\n";
     model[unassignedIndex] = TRUE;
     bool withTrue = DPLL(kb, model);
-
+    
     if (withTrue){
         return true;
     }
-
+    
+    cout << "Trying " << lName << " = F\n";
     model[unassignedIndex] = FALSE;
     bool withFalse = DPLL(kb, model);
 
@@ -49,9 +54,6 @@ int main(int argc, char ** argv){
     // If the last argument is "+UCH", use the UC heuristic!
     if ((string)argv[argc-1] == "+UCH"){
         useUCH = true;
-        cout << "Using UCH...\n";
-    }else{
-        cout << "NOT using UCH...\n";
     }
 
     if (argc == 1){
@@ -66,9 +68,25 @@ int main(int argc, char ** argv){
     auto kb = CNFKnowledgeBase();
     kb.loadKB(filename);
     kb.addFacts(argc, argv);
-    
     kb.printKB();
+    bool isSatisfiable = DPLL_Satisfiable(kb, NULL);
+    cout << "\n";
+    
+    if (isSatisfiable){
+        cout << "Solution (model):\n";
+        kb.printAssignments();
+        kb.printTruePropositions();
+    }else{
 
-    cout << DPLL_Satisfiable(kb, NULL) << endl;
-    kb.printAssignments();
+    }
+
+    cout << "Total DPLL calls: " << DPLLcalls << endl;
+    cout << "UCH = ";
+    if (useUCH == true){
+        cout << "True\n";
+    }else{
+        cout << "False\n";
+    }
+
+    return 0;
 }

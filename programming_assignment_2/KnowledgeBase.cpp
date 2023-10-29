@@ -14,10 +14,23 @@ void CNFKnowledgeBase::printKB(){
 }
 
 void CNFKnowledgeBase::printAssignments(){
-    cout << "Number of literals: " << allLiterals.size() << endl;
+    cout << "Truth assignments for each literal: " << allLiterals.size() << endl;
     for (int i = 0; i < allLiterals.size(); i++){
         cout << allLiterals.at(i)->name << " : " << allLiterals.at(i)->assign << endl;
     }
+
+    cout << "\n";
+}
+
+void CNFKnowledgeBase::printTruePropositions(){
+    cout << "Just the Satisfied (true) propositions:\n";
+
+    for (int i = 0; i < allLiterals.size(); i++){
+        if (allLiterals.at(i)->assign == TRUE){
+            cout << allLiterals.at(i)->name << " ";
+        }
+    }
+    cout << "\n\n";
 }
 
 // Returns a pointer to the Literal object specified by the name
@@ -46,6 +59,14 @@ void CNFKnowledgeBase::loadKB(std::string filename){
 
     while(getline(kbFile, currLine)) {
         istringstream ss(currLine);
+
+        if (currLine.empty()){
+            continue;
+        }
+
+        if (currLine.at(0) == '#' || currLine.at(0) == '\n' || currLine.at(0) == '\0'){
+            continue;
+        }
         
         // Parse through each word at each line and create "CNFLiteral" objects
         auto newSentence = make_shared<CNFSentence>();
@@ -53,6 +74,10 @@ void CNFKnowledgeBase::loadKB(std::string filename){
             ss >> currLiteralName;
 
             if (ss.fail()){
+                continue;
+            }
+
+            if (currLiteralName.empty()){
                 continue;
             }
 
@@ -91,9 +116,9 @@ void CNFKnowledgeBase::addFact(std::string name){
     auto l = findLiteral(name);
     
     if (l != NULL){
-        l->assign = negated;
+        l->assign = !negated;
     }else{
-        l = make_shared<Literal>(name, negated);
+        l = make_shared<Literal>(name, !negated);
     }
 
     auto newSentence = make_shared<CNFSentence>();
@@ -141,12 +166,21 @@ std::vector<ASSIGNMENT> CNFKnowledgeBase::extractModel(){
 ASSIGNMENT CNFKnowledgeBase::checkAssignment(std::vector<ASSIGNMENT>& model){
     assignModel(model);
 
+    bool notSetFound = false;
+
     for (int i = 0; i < sentences.size(); i++){
         int currEval = sentences.at(i)->evalSentence();
 
-        if (currEval != TRUE){
+        if (currEval == FALSE){
             return currEval;
         }
+        else if (currEval == NOT_SET){
+            notSetFound = true;
+        }
+    }
+
+    if (notSetFound){
+        return NOT_SET;
     }
 
     return TRUE;
@@ -176,4 +210,15 @@ int CNFKnowledgeBase::findUnassignedLiteralIndex(){
     }
 
     return -1;
+}
+
+std::string CNFKnowledgeBase::getLiteralName(int index){
+
+    if (index < 0 || index >= allLiterals.size()){
+        cout << "Cannot access literal at index " << index << endl;
+        cout << "Number of literals = " << allLiterals.size() << endl;    
+        return "";
+    }
+
+    return allLiterals.at(index)->name;
 }

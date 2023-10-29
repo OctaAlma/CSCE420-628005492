@@ -131,6 +131,8 @@ class CNFKnowledgeBase{
     // model.at(i) corresponds to the assignment of literalNames.at(i)
     ASSIGNMENT checkAssignment(std::vector<ASSIGNMENT>& model);
     void printAssignments();
+    void printTruePropositions();
+    std::string getLiteralName(int index);
 };
 
 #endif
