@@ -62,13 +62,10 @@ int main(int argc, char ** argv){
     }
 
     string filename = argv[1];
-
-    cout << "Filename = " << filename << endl;
-
+    
     auto kb = CNFKnowledgeBase();
     kb.loadKB(filename);
     kb.addFacts(argc, argv);
-    kb.printKB();
     bool isSatisfiable = DPLL_Satisfiable(kb, NULL);
     cout << "\n";
     
@@ -77,7 +74,7 @@ int main(int argc, char ** argv){
         kb.printAssignments();
         kb.printTruePropositions();
     }else{
-
+        cout << "Unsatisfiable.\n";
     }
 
     cout << "Total DPLL calls: " << DPLLcalls << endl;

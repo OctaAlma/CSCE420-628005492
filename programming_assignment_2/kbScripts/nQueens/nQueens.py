@@ -1,7 +1,7 @@
 clauses = []
 
 # HAS TO BE GREATER THAN 3
-n = 8
+n = 4
 
 for col in range(1, n+1, 1):
     for row in range(1, n+1, 1):
@@ -11,7 +11,7 @@ for col in range(1, n+1, 1):
                 continue
 
             # If a queen is in column j, there cannot be a queen in column j
-            clauses.append("(-> Q" + str(col) + str(row) + " (not Q" + str(otherCol) + str(row) + "))")
+            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(otherCol) + str(row) + "))")
 
 # if a queen is in row j, there cannot be another queen in row j
 for col in range(1, n+1, 1):
@@ -22,7 +22,7 @@ for col in range(1, n+1, 1):
                 continue
 
             # If a queen is in column j, there cannot be a queen in column j
-            clauses.append("(-> Q" + str(col) + str(row) + " (not Q" + str(col) + str(otherRow) + "))")
+            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(col) + str(otherRow) + "))")
 
 
 # Queens should not be able to attack each other diagonally
@@ -34,7 +34,7 @@ for col in range(1, n+1, 1):
         diagCol = col - 1
 
         while(diagRow > 0 and diagCol > 0):
-            clauses.append("(-> Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
+            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
 
             diagRow -= 1
             diagCol -= 1
@@ -44,7 +44,7 @@ for col in range(1, n+1, 1):
         diagCol = col + 1
 
         while (diagRow <= n and diagCol <= n):
-            clauses.append("(-> Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
+            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
 
             diagRow += 1
             diagCol += 1
@@ -54,7 +54,7 @@ for col in range(1, n+1, 1):
         diagCol = col - 1
 
         while (diagRow <= n and diagCol > 0):
-            clauses.append("(-> Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
+            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
 
             diagRow += 1
             diagCol -= 1
@@ -63,7 +63,7 @@ for col in range(1, n+1, 1):
         diagRow = row - 1
         diagCol = col + 1
         while (diagRow > 0 and diagCol <= n):
-            clauses.append("(-> Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
+            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
 
             diagRow -= 1
             diagCol += 1

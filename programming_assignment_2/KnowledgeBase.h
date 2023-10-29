@@ -43,7 +43,6 @@ struct CNFSentence{
         for (auto currLiteral = literals.begin(); currLiteral != literals.end(); currLiteral++){
             
             if ((*currLiteral)->literal->assign == NOT_SET){
-                // std::cout << "Literal " << (*currLiteral)->literal->name << " does not have an assigned value.\n";
                 return -1;
             
             }else{
@@ -62,9 +61,9 @@ struct CNFSentence{
 
     // If the sentence has a unit literal, returns a pointer to the literal that is not set yet
     // Otherwise, returns NULL
-    std::shared_ptr<Literal> isUnitClause(){
+    std::shared_ptr<CNFLiteral> isUnitClause(){
         if (literals.size() == 1){
-            return literals.at(0)->literal;
+            return literals.at(0);
         }
 
         std::shared_ptr<CNFLiteral> unitLiteral = NULL;
@@ -84,7 +83,7 @@ struct CNFSentence{
             }
         }
 
-        return unitLiteral->literal;
+        return unitLiteral;
     }
 
     void printSentence(){
