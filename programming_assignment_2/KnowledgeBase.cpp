@@ -1,12 +1,6 @@
 #include "KnowledgeBase.h"
 using namespace std;
 
-unsigned int countWordsInString(std::string const& str)
-{
-    std::stringstream stream(str);
-    return std::distance(std::istream_iterator<std::string>(stream), std::istream_iterator<std::string>());
-}
-
 void CNFKnowledgeBase::printKB(){
     for (int i = 0; i < sentences.size(); i++){
         sentences.at(i)->printSentence();
