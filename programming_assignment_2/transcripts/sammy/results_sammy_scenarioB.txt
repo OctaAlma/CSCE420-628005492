@@ -1,0 +1,116 @@
+./DPLL ./CNFkbs/sammy.cnf O1W O2Y O3W L1W L2B L3B 
+model: { 'L1W': 1, 'C1W': -1, 'L1Y': -1, 'C1Y': -1, 'L1B': -1, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C1W = T
+model: { 'L1W': 1, 'C1W': 1, 'L1Y': -1, 'C1Y': -1, 'L1B': -1, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying C1W = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': -1, 'C1Y': -1, 'L1B': -1, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying L1Y = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 1, 'C1Y': -1, 'L1B': -1, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying L1Y = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': -1, 'L1B': -1, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C1Y = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 1, 'L1B': -1, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying C1Y = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': -1, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying L1B = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 1, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying L1B = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': -1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C1B = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': -1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying L2W = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 1, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying L2W = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': -1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C2W = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 1, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying C2W = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': -1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying L2Y = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 1, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying L2Y = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': -1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C2Y = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': -1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C2B = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 1, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying C2B = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': -1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying L3W = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 1, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying L3W = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': -1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C3W = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': -1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying L3Y = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 1, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying L3Y = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': -1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C3Y = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 1, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying C3Y = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': -1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying C3B = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': 1, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying C3B = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': 0, 'O1W': 1, 'O1Y': -1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying O1Y = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': 0, 'O1W': 1, 'O1Y': 1, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying O1Y = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': 0, 'O1W': 1, 'O1Y': 0, 'O2W': -1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying O2W = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': 0, 'O1W': 1, 'O1Y': 0, 'O2W': 1, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Backtracking
+Trying O2W = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': 0, 'O1W': 1, 'O1Y': 0, 'O2W': 0, 'O2Y': 1, 'O3W': 1, 'O3Y': -1 }
+Trying O3Y = T
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': 0, 'O1W': 1, 'O1Y': 0, 'O2W': 0, 'O2Y': 1, 'O3W': 1, 'O3Y': 1 }
+Backtracking
+Trying O3Y = F
+model: { 'L1W': 1, 'C1W': 0, 'L1Y': 0, 'C1Y': 0, 'L1B': 0, 'C1B': 1, 'L2W': 0, 'C2W': 0, 'L2Y': 0, 'C2Y': 1, 'L2B': 1, 'C2B': 0, 'L3W': 0, 'C3W': 1, 'L3Y': 0, 'C3Y': 0, 'L3B': 1, 'C3B': 0, 'O1W': 1, 'O1Y': 0, 'O2W': 0, 'O2Y': 1, 'O3W': 1, 'O3Y': 0 }
+
+Solution (model):
+Solution:
+L1W : 1
+C1W : 0
+L1Y : 0
+C1Y : 0
+L1B : 0
+C1B : 1
+L2W : 0
+C2W : 0
+L2Y : 0
+C2Y : 1
+L2B : 1
+C2B : 0
+L3W : 0
+C3W : 1
+L3Y : 0
+C3Y : 0
+L3B : 1
+C3B : 0
+O1W : 1
+O1Y : 0
+O2W : 0
+O2Y : 1
+O3W : 1
+O3Y : 0
+
+Just the Satisfied (true) propositions:
+L1W C1B C2Y L2B C3W L3B O1W O2Y O3W 
+
+Total DPLL calls: 34
+UCH = False

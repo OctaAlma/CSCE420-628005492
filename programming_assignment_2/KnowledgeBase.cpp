@@ -7,8 +7,21 @@ void CNFKnowledgeBase::printKB(){
     }
 }
 
+void CNFKnowledgeBase::printModelAssignments(){
+    cout << "model: { ";
+
+    for (int i = 0; i < allLiterals.size(); i++){
+        cout << "\'" << allLiterals.at(i)->name << "\': " << allLiterals.at(i)->assign;
+        if (i != allLiterals.size() - 1){
+            cout << ", ";
+        }
+    }
+
+    cout << " }\n";
+}
+
 void CNFKnowledgeBase::printAssignments(){
-    cout << "Truth assignments for each literal: " << allLiterals.size() << endl;
+    cout << "Solution:\n";
     for (int i = 0; i < allLiterals.size(); i++){
         cout << allLiterals.at(i)->name << " : " << allLiterals.at(i)->assign << endl;
     }
@@ -73,6 +86,10 @@ void CNFKnowledgeBase::loadKB(std::string filename){
 
             if (currLiteralName.empty()){
                 continue;
+            }
+
+            if (currLiteralName.at(0) == '#'){
+                break;
             }
 
             bool negated = false;

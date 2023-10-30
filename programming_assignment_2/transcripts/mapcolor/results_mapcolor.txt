@@ -1,0 +1,116 @@
+./DPLL ./CNFkbs/mapcolor.cnf 
+model: { 'WAR': -1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying WAR = T
+model: { 'WAR': 1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying WAG = T
+model: { 'WAR': 1, 'WAG': 1, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying WAG = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying WAB = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying WAB = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying NTR = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying NTR = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying NTG = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying NTB = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying NTB = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying SAR = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying SAR = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying SAG = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 1, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying SAG = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': -1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying SAB = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': -1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying QR = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': -1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying QG = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying QG = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying QB = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying QB = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying NSWR = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying NSWR = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying NSWG = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying NSWB = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying NSWB = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying VR = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying VG = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying VG = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 0, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying VB = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 0, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+Trying VB = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 0, 'VB': 0, 'TR': -1, 'TG': -1, 'TB': -1 }
+Trying TR = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 0, 'VB': 0, 'TR': 1, 'TG': -1, 'TB': -1 }
+Trying TG = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 0, 'VB': 0, 'TR': 1, 'TG': 1, 'TB': -1 }
+Backtracking
+Trying TG = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 0, 'VB': 0, 'TR': 1, 'TG': 0, 'TB': -1 }
+Trying TB = T
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 0, 'VB': 0, 'TR': 1, 'TG': 0, 'TB': 1 }
+Backtracking
+Trying TB = F
+model: { 'WAR': 1, 'WAG': 0, 'WAB': 0, 'NTR': 0, 'NTG': 1, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 1, 'QG': 0, 'QB': 0, 'NSWR': 0, 'NSWG': 1, 'NSWB': 0, 'VR': 1, 'VG': 0, 'VB': 0, 'TR': 1, 'TG': 0, 'TB': 0 }
+
+Solution (model):
+Solution:
+WAR : 1
+WAG : 0
+WAB : 0
+NTR : 0
+NTG : 1
+NTB : 0
+SAR : 0
+SAG : 0
+SAB : 1
+QR : 1
+QG : 0
+QB : 0
+NSWR : 0
+NSWG : 1
+NSWB : 0
+VR : 1
+VG : 0
+VB : 0
+TR : 1
+TG : 0
+TB : 0
+
+Just the Satisfied (true) propositions:
+WAR NTG SAB QR NSWG VR TR 
+
+Total DPLL calls: 36
+UCH = False

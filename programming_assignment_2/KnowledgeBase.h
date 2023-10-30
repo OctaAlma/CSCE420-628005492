@@ -129,6 +129,7 @@ class CNFKnowledgeBase{
 
     public:
     void printKB();
+    void printModelAssignments();
     void loadKB(std::string filename);
     void addFact(std::string s);
     void addFacts(int argc, char** argv);

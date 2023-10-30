@@ -23,8 +23,14 @@ bool DPLL(CNFKnowledgeBase kb, std::vector<ASSIGNMENT> model){
     DPLLcalls++;
 
     int modelCheck = kb.checkAssignment(model);
+    kb.printModelAssignments();
     
     if (modelCheck != NOT_SET){
+
+        if (modelCheck == 0){
+            cout << "Backtracking\n";
+        }
+
         return modelCheck; // Model check will be true or false
     }
 
@@ -60,6 +66,13 @@ bool DPLL(CNFKnowledgeBase kb, std::vector<ASSIGNMENT> model){
     return withFalse;
 }
 
+void printArgs(int argc, char** argv){
+    for (int i = 0; i < argc; i++){
+        cout << argv[i] << " ";
+    }
+    cout << endl;
+}
+
 int main(int argc, char ** argv){
 
     // If the last argument is "+UCH", use the UC heuristic!
@@ -68,9 +81,11 @@ int main(int argc, char ** argv){
     }
 
     if (argc == 1){
-        cout << "Usage: ./DPLL <KB-FILENAME> <FACTS>* <+UCH>*";
+        cout << "Usage: ./DPLL <KB-FILENAME> <LITERAL>* [+UCH]\n";
         exit(0);
     }
+
+    printArgs(argc, argv);
 
     string filename = argv[1];
     
