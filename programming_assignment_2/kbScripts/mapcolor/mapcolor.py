@@ -21,16 +21,6 @@ for s in states:
     curr += ")"
     clauses.append(curr)
 
-# Every state can only be ONE color:
-for s in states:
-    for c in colors:
-        for otherc in colors:
-            if (c == otherc):
-                continue
-            
-            curr = "(implies " + s + c + " (not " + s + otherc + "))"
-            clauses.append(curr)
-
 # Each state cannot have the same color as its neighbors
 for s in states:
     for c in colors:
