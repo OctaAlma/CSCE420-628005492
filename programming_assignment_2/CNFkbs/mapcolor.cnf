@@ -410,3 +410,129 @@ TR TG TB
 
 -VB -NSWB
 
+# (<-> WAR (and (not WAG) (not WAB)))
+
+-WAG -WAR
+-WAB -WAR
+WAG WAB WAR
+
+# (<-> WAG (and (not WAR) (not WAB)))
+
+-WAR -WAG
+-WAB -WAG
+WAR WAB WAG
+
+# (<-> WAB (and (not WAR) (not WAG)))
+
+-WAR -WAB
+-WAG -WAB
+WAR WAG WAB
+
+# (<-> NTR (and (not NTG) (not NTB)))
+
+-NTG -NTR
+-NTB -NTR
+NTG NTB NTR
+
+# (<-> NTG (and (not NTR) (not NTB)))
+
+-NTR -NTG
+-NTB -NTG
+NTR NTB NTG
+
+# (<-> NTB (and (not NTR) (not NTG)))
+
+-NTR -NTB
+-NTG -NTB
+NTR NTG NTB
+
+# (<-> SAR (and (not SAG) (not SAB)))
+
+-SAG -SAR
+-SAB -SAR
+SAG SAB SAR
+
+# (<-> SAG (and (not SAR) (not SAB)))
+
+-SAR -SAG
+-SAB -SAG
+SAR SAB SAG
+
+# (<-> SAB (and (not SAR) (not SAG)))
+
+-SAR -SAB
+-SAG -SAB
+SAR SAG SAB
+
+# (<-> QR (and (not QG) (not QB)))
+
+-QG -QR
+-QB -QR
+QG QB QR
+
+# (<-> QG (and (not QR) (not QB)))
+
+-QR -QG
+-QB -QG
+QR QB QG
+
+# (<-> QB (and (not QR) (not QG)))
+
+-QR -QB
+-QG -QB
+QR QG QB
+
+# (<-> NSWR (and (not NSWG) (not NSWB)))
+
+-NSWG -NSWR
+-NSWB -NSWR
+NSWG NSWB NSWR
+
+# (<-> NSWG (and (not NSWR) (not NSWB)))
+
+-NSWR -NSWG
+-NSWB -NSWG
+NSWR NSWB NSWG
+
+# (<-> NSWB (and (not NSWR) (not NSWG)))
+
+-NSWR -NSWB
+-NSWG -NSWB
+NSWR NSWG NSWB
+
+# (<-> VR (and (not VG) (not VB)))
+
+-VG -VR
+-VB -VR
+VG VB VR
+
+# (<-> VG (and (not VR) (not VB)))
+
+-VR -VG
+-VB -VG
+VR VB VG
+
+# (<-> VB (and (not VR) (not VG)))
+
+-VR -VB
+-VG -VB
+VR VG VB
+
+# (<-> TR (and (not TG) (not TB)))
+
+-TG -TR
+-TB -TR
+TG TB TR
+
+# (<-> TG (and (not TR) (not TB)))
+
+-TR -TG
+-TB -TG
+TR TB TG
+
+# (<-> TB (and (not TR) (not TG)))
+
+-TR -TB
+-TG -TB
+TR TG TB
+

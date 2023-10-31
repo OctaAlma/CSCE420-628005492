@@ -39,6 +39,15 @@ for s in states:
             curr = "(implies " + s + c + " (not " + n + c + "))"
             clauses.append(curr)
 
+# If a state is not two colors, then it must necessarily be the third color:
+for s in states:
+    for c in colors:
+        noC = [otherc for otherc in colors if otherc != c]
+        noC1 = noC[0]
+        noC2 = noC[1]
+
+        curr = "(<-> " + s + c + " (and (not " + s + noC1 + ") (not " + s + noC2 + ")))"
+        clauses.append(curr)
 
 for i in clauses:
     print(i)
