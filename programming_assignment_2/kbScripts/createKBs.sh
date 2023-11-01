@@ -15,6 +15,8 @@ maxN=6
 
 for i in {$minN..$maxN};
 do
-    python3 ./nQueens/nQueens.py $i > ./nQueens/$i-Queens.kb
-    python3 convCNF.py ./nQueens/$i-Queens.kb -DIMACS > ../CNFs/$i-Queens.cnf
+    python3 ./nQueens/nQueens.py $i > ./nQueens/${i}queens.kb
+    python3 convCNF.py ./nQueens/${i}queens.kb -DIMACS > ../CNFs/${i}queens.cnf
 done
+
+echo "...done!"

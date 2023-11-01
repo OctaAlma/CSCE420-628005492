@@ -1,4 +1,4 @@
-./DPLL ./CNFkbs/mapcolor.cnf QG VB 
+./DPLL ./CNFs/mapcolor.cnf QG VB 
 model: { 'WAR': -1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
 Trying WAR = T
 model: { 'WAR': 1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }

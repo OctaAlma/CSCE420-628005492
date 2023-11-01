@@ -6,8 +6,14 @@ if (len(sys.argv) != 2):
     print("Usage: python3 nQueens.py DIM")
     sys.exit()
 
+n = -1
+sep = ""
+
 try:
     n = int(sys.argv[1])
+    if (n >= 10):
+        sep = "_"
+    
 except:
     print("Please enter a valid integer")
     sys.exit()
@@ -22,7 +28,7 @@ for col in range(1, n+1, 1):
                 continue
 
             # If a queen is in column j, there cannot be a queen in column j
-            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(otherCol) + str(row) + "))")
+            clauses.append("(implies Q" + str(col) + sep + str(row) + " (not Q" + str(otherCol) + sep + str(row) + "))")
 
 # if a queen is in row j, there cannot be another queen in row j
 for col in range(1, n+1, 1):
@@ -33,7 +39,7 @@ for col in range(1, n+1, 1):
                 continue
 
             # If a queen is in column j, there cannot be a queen in column j
-            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(col) + str(otherRow) + "))")
+            clauses.append("(implies Q" + str(col) + sep + str(row) + " (not Q" + str(col) + sep + str(otherRow) + "))")
 
 
 # Queens should not be able to attack each other diagonally
@@ -45,7 +51,7 @@ for col in range(1, n+1, 1):
         diagCol = col - 1
 
         while(diagRow > 0 and diagCol > 0):
-            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
+            clauses.append("(implies Q" + str(col) + sep + str(row) + " (not Q" + str(diagCol) + sep + str(diagRow) + "))")
 
             diagRow -= 1
             diagCol -= 1
@@ -55,7 +61,7 @@ for col in range(1, n+1, 1):
         diagCol = col + 1
 
         while (diagRow <= n and diagCol <= n):
-            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
+            clauses.append("(implies Q" + str(col) + sep + str(row) + " (not Q" + str(diagCol) + sep + str(diagRow) + "))")
 
             diagRow += 1
             diagCol += 1
@@ -65,7 +71,7 @@ for col in range(1, n+1, 1):
         diagCol = col - 1
 
         while (diagRow <= n and diagCol > 0):
-            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
+            clauses.append("(implies Q" + str(col) + sep + str(row) + " (not Q" + str(diagCol) + sep + str(diagRow) + "))")
 
             diagRow += 1
             diagCol -= 1
@@ -74,7 +80,7 @@ for col in range(1, n+1, 1):
         diagRow = row - 1
         diagCol = col + 1
         while (diagRow > 0 and diagCol <= n):
-            clauses.append("(implies Q" + str(col) + str(row) + " (not Q" + str(diagCol) + str(diagRow) + "))")
+            clauses.append("(implies Q" + str(col) + sep + str(row) + " (not Q" + str(diagCol) + sep + str(diagRow) + "))")
 
             diagRow -= 1
             diagCol += 1
@@ -87,7 +93,7 @@ for col in range(1, n+1, 1):
     currClause = "(or "
     
     for row in range(1, n+1, 1):
-        currClause += "Q" + str(col) + str(row)
+        currClause += "Q" + str(col) + sep + str(row)
 
         if (row != n):
             currClause += " "

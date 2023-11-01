@@ -1,4 +1,4 @@
-./DPLL ./CNFkbs/mapcolor.cnf QG 
+./DPLL ./CNFs/mapcolor.cnf QG 
 model: { 'WAR': -1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
 Trying WAR = T
 model: { 'WAR': 1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': -1, 'TR': -1, 'TG': -1, 'TB': -1 }
@@ -124,7 +124,6 @@ Trying TB = F
 model: { 'WAR': 0, 'WAG': 1, 'WAB': 0, 'NTR': 1, 'NTG': 0, 'NTB': 0, 'SAR': 0, 'SAG': 0, 'SAB': 1, 'QR': 0, 'QG': 1, 'QB': 0, 'NSWR': 1, 'NSWG': 0, 'NSWB': 0, 'VR': 0, 'VG': 1, 'VB': 0, 'TR': 1, 'TG': 0, 'TB': 0 }
 
 Solution (model):
-Solution:
 WAR : 0
 WAG : 1
 WAB : 0

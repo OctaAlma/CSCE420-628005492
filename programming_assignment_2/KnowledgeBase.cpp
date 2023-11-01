@@ -21,7 +21,6 @@ void CNFKnowledgeBase::printModelAssignments(){
 }
 
 void CNFKnowledgeBase::printAssignments(){
-    cout << "Solution:\n";
     for (int i = 0; i < allLiterals.size(); i++){
         cout << allLiterals.at(i)->name << " : " << allLiterals.at(i)->assign << endl;
     }

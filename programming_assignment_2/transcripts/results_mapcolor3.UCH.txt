@@ -1,0 +1,37 @@
+./DPLL ./CNFs/mapcolor.cnf QG VB +UCH 
+model: { 'WAR': -1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': -1, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing NTG = 0 by UCH
+model: { 'WAR': -1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': 0, 'NTB': -1, 'SAR': -1, 'SAG': -1, 'SAB': -1, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing SAG = 0 by UCH
+model: { 'WAR': -1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': 0, 'NTB': -1, 'SAR': -1, 'SAG': 0, 'SAB': -1, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing SAB = 0 by UCH
+model: { 'WAR': -1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': 0, 'NTB': -1, 'SAR': -1, 'SAG': 0, 'SAB': 0, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing SAR = 1 by UCH
+model: { 'WAR': -1, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': 0, 'NTB': -1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing WAR = 0 by UCH
+model: { 'WAR': 0, 'WAG': -1, 'WAB': -1, 'NTR': -1, 'NTG': 0, 'NTB': -1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing NTR = 0 by UCH
+model: { 'WAR': 0, 'WAG': -1, 'WAB': -1, 'NTR': 0, 'NTG': 0, 'NTB': -1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing NTB = 1 by UCH
+model: { 'WAR': 0, 'WAG': -1, 'WAB': -1, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing WAB = 0 by UCH
+model: { 'WAR': 0, 'WAG': -1, 'WAB': 0, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing WAG = 1 by UCH
+model: { 'WAR': 0, 'WAG': 1, 'WAB': 0, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': -1, 'QG': 1, 'QB': -1, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing QB = 0 by UCH
+model: { 'WAR': 0, 'WAG': 1, 'WAB': 0, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': -1, 'QG': 1, 'QB': 0, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing QR = 0 by UCH
+model: { 'WAR': 0, 'WAG': 1, 'WAB': 0, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': 0, 'QG': 1, 'QB': 0, 'NSWR': -1, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing NSWR = 0 by UCH
+model: { 'WAR': 0, 'WAG': 1, 'WAB': 0, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': 0, 'QG': 1, 'QB': 0, 'NSWR': 0, 'NSWG': -1, 'NSWB': -1, 'VR': -1, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing VR = 0 by UCH
+model: { 'WAR': 0, 'WAG': 1, 'WAB': 0, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': 0, 'QG': 1, 'QB': 0, 'NSWR': 0, 'NSWG': -1, 'NSWB': -1, 'VR': 0, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing NSWG = 0 by UCH
+model: { 'WAR': 0, 'WAG': 1, 'WAB': 0, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': 0, 'QG': 1, 'QB': 0, 'NSWR': 0, 'NSWG': 0, 'NSWB': -1, 'VR': 0, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Forcing NSWB = 1 by UCH
+model: { 'WAR': 0, 'WAG': 1, 'WAB': 0, 'NTR': 0, 'NTG': 0, 'NTB': 1, 'SAR': 1, 'SAG': 0, 'SAB': 0, 'QR': 0, 'QG': 1, 'QB': 0, 'NSWR': 0, 'NSWG': 0, 'NSWB': 1, 'VR': 0, 'VG': -1, 'VB': 1, 'TR': -1, 'TG': -1, 'TB': -1 }
+Backtracking
+
+Unsatisfiable.
+Total DPLL calls: 16
+UCH = True
