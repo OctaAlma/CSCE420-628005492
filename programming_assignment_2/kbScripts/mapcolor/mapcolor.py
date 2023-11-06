@@ -26,7 +26,7 @@ for s in states:
     for c in colors:
         neighbors = allNeighbors[s]
         for n in neighbors:
-            curr = "(implies " + s + c + " (not " + n + c + "))"
+            curr = "(-> " + s + c + " (not " + n + c + "))"
             clauses.append(curr)
 
 # If a state is not two colors, then it must necessarily be the third color:

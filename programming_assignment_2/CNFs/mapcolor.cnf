@@ -26,219 +26,219 @@ VR VG VB
 
 TR TG TB
 
-# (implies WAR (not NTR))
+# (-> WAR (not NTR))
 
 -WAR -NTR
 
-# (implies WAR (not SAR))
+# (-> WAR (not SAR))
 
 -WAR -SAR
 
-# (implies WAG (not NTG))
+# (-> WAG (not NTG))
 
 -WAG -NTG
 
-# (implies WAG (not SAG))
+# (-> WAG (not SAG))
 
 -WAG -SAG
 
-# (implies WAB (not NTB))
+# (-> WAB (not NTB))
 
 -WAB -NTB
 
-# (implies WAB (not SAB))
+# (-> WAB (not SAB))
 
 -WAB -SAB
 
-# (implies NTR (not WAR))
+# (-> NTR (not WAR))
 
 -NTR -WAR
 
-# (implies NTR (not SAR))
+# (-> NTR (not SAR))
 
 -NTR -SAR
 
-# (implies NTR (not QR))
+# (-> NTR (not QR))
 
 -NTR -QR
 
-# (implies NTG (not WAG))
+# (-> NTG (not WAG))
 
 -NTG -WAG
 
-# (implies NTG (not SAG))
+# (-> NTG (not SAG))
 
 -NTG -SAG
 
-# (implies NTG (not QG))
+# (-> NTG (not QG))
 
 -NTG -QG
 
-# (implies NTB (not WAB))
+# (-> NTB (not WAB))
 
 -NTB -WAB
 
-# (implies NTB (not SAB))
+# (-> NTB (not SAB))
 
 -NTB -SAB
 
-# (implies NTB (not QB))
+# (-> NTB (not QB))
 
 -NTB -QB
 
-# (implies SAR (not WAR))
+# (-> SAR (not WAR))
 
 -SAR -WAR
 
-# (implies SAR (not NTR))
+# (-> SAR (not NTR))
 
 -SAR -NTR
 
-# (implies SAR (not QR))
+# (-> SAR (not QR))
 
 -SAR -QR
 
-# (implies SAR (not NSWR))
+# (-> SAR (not NSWR))
 
 -SAR -NSWR
 
-# (implies SAR (not VR))
+# (-> SAR (not VR))
 
 -SAR -VR
 
-# (implies SAG (not WAG))
+# (-> SAG (not WAG))
 
 -SAG -WAG
 
-# (implies SAG (not NTG))
+# (-> SAG (not NTG))
 
 -SAG -NTG
 
-# (implies SAG (not QG))
+# (-> SAG (not QG))
 
 -SAG -QG
 
-# (implies SAG (not NSWG))
+# (-> SAG (not NSWG))
 
 -SAG -NSWG
 
-# (implies SAG (not VG))
+# (-> SAG (not VG))
 
 -SAG -VG
 
-# (implies SAB (not WAB))
+# (-> SAB (not WAB))
 
 -SAB -WAB
 
-# (implies SAB (not NTB))
+# (-> SAB (not NTB))
 
 -SAB -NTB
 
-# (implies SAB (not QB))
+# (-> SAB (not QB))
 
 -SAB -QB
 
-# (implies SAB (not NSWB))
+# (-> SAB (not NSWB))
 
 -SAB -NSWB
 
-# (implies SAB (not VB))
+# (-> SAB (not VB))
 
 -SAB -VB
 
-# (implies QR (not NTR))
+# (-> QR (not NTR))
 
 -QR -NTR
 
-# (implies QR (not SAR))
+# (-> QR (not SAR))
 
 -QR -SAR
 
-# (implies QR (not NSWR))
+# (-> QR (not NSWR))
 
 -QR -NSWR
 
-# (implies QG (not NTG))
+# (-> QG (not NTG))
 
 -QG -NTG
 
-# (implies QG (not SAG))
+# (-> QG (not SAG))
 
 -QG -SAG
 
-# (implies QG (not NSWG))
+# (-> QG (not NSWG))
 
 -QG -NSWG
 
-# (implies QB (not NTB))
+# (-> QB (not NTB))
 
 -QB -NTB
 
-# (implies QB (not SAB))
+# (-> QB (not SAB))
 
 -QB -SAB
 
-# (implies QB (not NSWB))
+# (-> QB (not NSWB))
 
 -QB -NSWB
 
-# (implies NSWR (not QR))
+# (-> NSWR (not QR))
 
 -NSWR -QR
 
-# (implies NSWR (not SAR))
+# (-> NSWR (not SAR))
 
 -NSWR -SAR
 
-# (implies NSWR (not VR))
+# (-> NSWR (not VR))
 
 -NSWR -VR
 
-# (implies NSWG (not QG))
+# (-> NSWG (not QG))
 
 -NSWG -QG
 
-# (implies NSWG (not SAG))
+# (-> NSWG (not SAG))
 
 -NSWG -SAG
 
-# (implies NSWG (not VG))
+# (-> NSWG (not VG))
 
 -NSWG -VG
 
-# (implies NSWB (not QB))
+# (-> NSWB (not QB))
 
 -NSWB -QB
 
-# (implies NSWB (not SAB))
+# (-> NSWB (not SAB))
 
 -NSWB -SAB
 
-# (implies NSWB (not VB))
+# (-> NSWB (not VB))
 
 -NSWB -VB
 
-# (implies VR (not SAR))
+# (-> VR (not SAR))
 
 -VR -SAR
 
-# (implies VR (not NSWR))
+# (-> VR (not NSWR))
 
 -VR -NSWR
 
-# (implies VG (not SAG))
+# (-> VG (not SAG))
 
 -VG -SAG
 
-# (implies VG (not NSWG))
+# (-> VG (not NSWG))
 
 -VG -NSWG
 
-# (implies VB (not SAB))
+# (-> VB (not SAB))
 
 -VB -SAB
 
-# (implies VB (not NSWB))
+# (-> VB (not NSWB))
 
 -VB -NSWB
 

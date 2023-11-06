@@ -1,5 +1,6 @@
 ### CSCE 420 - Programming Assignment 2
 Octavio Almanza
+
 UIN: 628005492
 
 #### Instructions

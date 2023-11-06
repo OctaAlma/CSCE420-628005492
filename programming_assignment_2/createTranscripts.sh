@@ -29,10 +29,10 @@ echo "Creating all the required transcripts..."
 minN=3
 maxN=6
 
-for i in {$minN..$maxN};
+for i in $(seq $minN $maxN);
 do
-    ./DPLL ./CNFs/${i}Queens.cnf > ./transcripts/results_${i}queens.txt
-    ./DPLL ./CNFs/${i}Queens.cnf +UCH > ./transcripts/results_${i}queens.UCH.txt
+    ./DPLL ./CNFs/${i}queens.cnf > ./transcripts/results_${i}queens.txt
+    ./DPLL ./CNFs/${i}queens.cnf +UCH > ./transcripts/results_${i}queens.UCH.txt
 done
 
 echo "...done!"
