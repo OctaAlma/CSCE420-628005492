@@ -1,6 +1,7 @@
 ## RESULTS
 
-Below is the requested text file. All of this data was obtained from the transcripts.
+Below is the requested results file. Please open the file with a markdown viewer.
+All of this data was obtained from the transcripts.
 
 | **Problem**      | **DPLL Calls (No UCH)** | **DPLL Calls with UCH** | **Model Output**                    | **Command Line Inputs**                             |
 |------------------|-------------------------|-------------------------|-------------------------------------|-----------------------------------------------------|

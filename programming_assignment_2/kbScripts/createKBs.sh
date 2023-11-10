@@ -13,7 +13,7 @@ python3 convCNF.py ./sammy/sammy.kb -DIMACS > ../CNFs/sammy.cnf
 minN=3
 maxN=6
 
-for i in {$minN..$maxN};
+for i in $(seq $minN $maxN);
 do
     python3 ./nQueens/nQueens.py $i > ./nQueens/${i}queens.kb
     python3 convCNF.py ./nQueens/${i}queens.kb -DIMACS > ../CNFs/${i}queens.cnf
