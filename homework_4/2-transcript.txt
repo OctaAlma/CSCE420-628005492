@@ -1,0 +1,28 @@
+octaalma@connect-172-31-44-216 ~/Desktop/CSCE420/hw4 % gprolog --consult solutions.pl
+GNU Prolog 1.5.0 (64 bits)
+Compiled Jul  8 2021, 09:35:47 with clang
+Copyright (C) 1999-2023 Daniel Diaz
+
+compiling /Users/octaalma/Desktop/CSCE420/hw4/solutions.pl for byte code...
+/Users/octaalma/Desktop/CSCE420/hw4/solutions.pl compiled, 100 lines read - 13231 bytes written, 8 ms
+| ?- query2a(X).
+
+X = sam ? ;
+
+X = bill ? ;
+
+X = joan ? ;
+
+(1 ms) no
+| ?- query2b(X).
+
+X = lance ? ;
+
+no
+| ?- query2c(X).
+
+X = charlie ? ;
+
+X = lisa ? ;
+
+no

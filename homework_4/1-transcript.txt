@@ -1,0 +1,48 @@
+Question 1:
+
+GNU Prolog 1.5.0 (64 bits)
+Compiled Jul  8 2021, 09:35:47 with clang
+Copyright (C) 1999-2023 Daniel Diaz
+
+| ?- consult('solutions.pl').
+compiling /Users/octaalma/Desktop/CSCE420/hw4/solutions.pl for byte code...
+/Users/octaalma/Desktop/CSCE420/hw4/solutions.pl compiled, 45 lines read - 5435 bytes written, 3 ms
+
+yes
+| ?- brother(rod,X).
+
+X = tod ? ;
+
+no
+| ?- sister(marge,X).
+
+X = patty ? ;
+
+X = selma ? ;
+
+no
+| ?- aunt(X,patty).
+
+X = bart ? ;
+
+X = lisa ? ;
+
+X = maggie ? ;
+
+no
+| ?- uncle(bart,X).
+
+X = herb ? ;
+
+no
+| ?- grandfather(maggie,X).
+
+X = abraham ? ;
+
+no
+| ?- granddaughter(jackie,D).
+
+D = maggie ? ;
+
+D = lisa ? ;
+uncaught exception: error(existence_error(procedure,grandmother/2),granddaughter/0)

@@ -1,0 +1,209 @@
+octaalma@Octavios-MacBook-Air ~/Desktop/CSCE420/hw4 % gprolog --consult-file solutions.pl
+GNU Prolog 1.5.0 (64 bits)
+Compiled Jul  8 2021, 09:35:47 with clang
+Copyright (C) 1999-2023 Daniel Diaz
+
+compiling /Users/octaalma/Desktop/CSCE420/hw4/solutions.pl for byte code...
+/Users/octaalma/Desktop/CSCE420/hw4/solutions.pl compiled, 157 lines read - 19522 bytes written, 7 ms
+| ?- mapcolor(WA,NT,SA,Q,NSW,V,T).   
+
+NSW = green
+NT = green
+Q = red
+SA = blue
+T = red
+V = red
+WA = red ? a
+
+NSW = green
+NT = green
+Q = red
+SA = blue
+T = green
+V = red
+WA = red
+
+NSW = green
+NT = green
+Q = red
+SA = blue
+T = blue
+V = red
+WA = red
+
+NSW = blue
+NT = blue
+Q = red
+SA = green
+T = red
+V = red
+WA = red
+
+NSW = blue
+NT = blue
+Q = red
+SA = green
+T = green
+V = red
+WA = red
+
+NSW = blue
+NT = blue
+Q = red
+SA = green
+T = blue
+V = red
+WA = red
+
+NSW = red
+NT = red
+Q = green
+SA = blue
+T = red
+V = green
+WA = green
+
+NSW = red
+NT = red
+Q = green
+SA = blue
+T = green
+V = green
+WA = green
+
+NSW = red
+NT = red
+Q = green
+SA = blue
+T = blue
+V = green
+WA = green
+
+NSW = blue
+NT = blue
+Q = green
+SA = red
+T = red
+V = green
+WA = green
+
+NSW = blue
+NT = blue
+Q = green
+SA = red
+T = green
+V = green
+WA = green
+
+NSW = blue
+NT = blue
+Q = green
+SA = red
+T = blue
+V = green
+WA = green
+
+NSW = red
+NT = red
+Q = blue
+SA = green
+T = red
+V = blue
+WA = blue
+
+NSW = red
+NT = red
+Q = blue
+SA = green
+T = green
+V = blue
+WA = blue
+
+NSW = red
+NT = red
+Q = blue
+SA = green
+T = blue
+V = blue
+WA = blue
+
+NSW = green
+NT = green
+Q = blue
+SA = red
+T = red
+V = blue
+WA = blue
+
+NSW = green
+NT = green
+Q = blue
+SA = red
+T = green
+V = blue
+WA = blue
+
+NSW = green
+NT = green
+Q = blue
+SA = red
+T = blue
+V = blue
+WA = blue
+
+(4 ms) no
+| ?- WA=green, mapcolor(WA,NT,SA,Q,NSW,V,T).
+
+NSW = red
+NT = red
+Q = green
+SA = blue
+T = red
+V = green
+WA = green ? a
+
+NSW = red
+NT = red
+Q = green
+SA = blue
+T = green
+V = green
+WA = green
+
+NSW = red
+NT = red
+Q = green
+SA = blue
+T = blue
+V = green
+WA = green
+
+NSW = blue
+NT = blue
+Q = green
+SA = red
+T = red
+V = green
+WA = green
+
+NSW = blue
+NT = blue
+Q = green
+SA = red
+T = green
+V = green
+WA = green
+
+NSW = blue
+NT = blue
+Q = green
+SA = red
+T = blue
+V = green
+WA = green
+
+(2 ms) no
+| ?- WA=red, Q=green, mapcolor(WA,NT,SA,Q,NSW,V,T).
+
+no
+| ?- 

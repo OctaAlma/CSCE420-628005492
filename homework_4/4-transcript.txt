@@ -1,0 +1,59 @@
+octaalma@connect-172-31-44-216 ~/Desktop/CSCE420/hw4 % gprolog --consult solutions.pl
+GNU Prolog 1.5.0 (64 bits)
+Compiled Jul  8 2021, 09:35:47 with clang
+Copyright (C) 1999-2023 Daniel Diaz
+
+compiling /Users/octaalma/Desktop/CSCE420/hw4/solutions.pl for byte code...
+/Users/octaalma/Desktop/CSCE420/hw4/solutions.pl compiled, 133 lines read - 17173 bytes written, 9 ms
+| ?- octal_code(A,B,C).
+
+111
+
+A = 1
+B = 1
+C = 1 ? ;
+
+110
+
+A = 1
+B = 1
+C = 0 ? ;
+
+101
+
+A = 1
+B = 0
+C = 1 ? ;
+
+100
+
+A = 1
+B = 0
+C = 0 ? ;
+
+011
+
+A = 0
+B = 1
+C = 1 ? ;
+
+010
+
+A = 0
+B = 1
+C = 0 ? ;
+
+001
+
+A = 0
+B = 0
+C = 1 ? ;
+
+000
+
+A = 0
+B = 0
+C = 0
+
+yes
+| ?-  
