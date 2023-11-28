@@ -44,10 +44,9 @@ aunt(X,Y) :- female(Y), parent(X,Z), sister(Z,Y).
 uncle(X,Y) :- male(Y), parent(X,Z), brother(Z,Y).
 
 grandfather(X,Y) :- male(Y), parent(X,Z), parent(Z,Y).
-grandfather(X,Y) :- female(Y), parent(X,Z), parent(Z,Y).
+grandmother(X,Y) :- female(Y), parent(X,Z), parent(Z,Y).
 
-%  CAUSES AN UNCAUGHT EXCEPTION: error(existence_error(procedure,grandmother/2),granddaughter/0)
-granddaughter(X,Y) :- female(Y), grandfather(Y,X); grandmother(Y,X).
+granddaughter(X,Y) :- female(Y), (grandfather(Y,X); grandmother(Y,X)).
 
 % Ancestor base case:
 ancestor(X,Y) :- parent(X,Y).

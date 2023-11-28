@@ -45,4 +45,16 @@ no
 D = maggie ? ;
 
 D = lisa ? ;
-uncaught exception: error(existence_error(procedure,grandmother/2),granddaughter/0)
+
+no
+| ?- ancestor(bart,X).
+
+X = homer ? ;
+
+X = marge ? ;
+
+X = abraham ? ;
+
+X = jackie ? ;
+
+no
