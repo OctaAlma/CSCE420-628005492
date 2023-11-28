@@ -1,6 +1,6 @@
-####CSCE 420 Homework 4
-#####Octavio Almanza
-#####UIN: 62800492
+#### CSCE 420 Homework 4
+##### Octavio Almanza
+##### UIN: 62800492
 
 You can view the transcripts for each problem by going to its respective transcript file ``PROB_NUM-transript.txt``, where ``PROB_NUM`` is the problem number.
 
